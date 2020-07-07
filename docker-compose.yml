@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  nboost:
+    build: .
+    env_file:
+        - "./local.env"
+    ports:
+      - 8000:8000
+
+networks:
+  default:
+    external:
+      name: development
